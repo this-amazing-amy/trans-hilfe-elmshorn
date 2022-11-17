@@ -1,0 +1,38 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+---
+<nav class="mb-8">
+	<ul class="grid grid-cols-5 gap-2 py-4">
+		<li>
+			<a class={pathname === '/' ? 'squiggle active' : 'squiggle'} href="/">Die Gruppe</a>
+		</li>
+		<li>
+			<a class={pathname === '/begriffe' ? 'squiggle active' : 'squiggle'}href="/begriffe">Begriffe</a>
+		</li>
+		<li>
+			<a class={pathname === '/bin-ich-trans' ? 'squiggle active' : 'squiggle'} href="/bin-ich-trans">Bin ich trans?</a>
+		</li>
+		<li>
+			<a class={pathname === '/eltern' ? 'squiggle active' : 'squiggle'}href="/eltern">Für Eltern</a>
+		</li>
+		<li>
+			<a class={pathname === '/kontakt' ? 'squiggle active' : 'squiggle'}href="/kontakt">Kontakt</a>
+		</li>
+	</ul>
+</nav>
+
+
+<style is:global>
+	.squiggle {
+		@apply pb-1;
+		background-position: 0 100%;
+		background-size: auto 4px;
+		background-repeat: repeat-x;
+	}
+	.active {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%23F5A9B8' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+	}
+	.squiggle:hover {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23F5A9B8' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+	}
+</style>
