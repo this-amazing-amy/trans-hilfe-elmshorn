@@ -12,15 +12,18 @@ import Navigation from '../components/navigation.astro'
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logo.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>Trans Hilfe Elmshorn - {title}</title>
 	</head>
 	<body>
-	<main class="max-w-screen-md mx-auto py-16">
-		<a href="/" class="prose max-w-none py-16 flex items-center justify-between cursor-pointer">
-			<h1 class="main-headline">Trans<br />Hilfe<br />Elmshorn</h1>
-		</a>
+	<main class="max-w-screen-md mx-auto py-16 px-6">
+		<div class="flex justify-between items-center md:flex-row flex-col-reverse">
+			<a href="/" class="prose max-w-none py-16 flex items-center justify-between cursor-pointer">
+				<h1 class="main-headline">Trans<br />Hilfe<br />Elmshorn</h1>
+			</a>
+			<img class="h-48 w-48 md:mr-20 mx-auto" src="/logo.png" />
+		</div>
 		<Navigation />
 		<slot />
 	</main>
@@ -32,7 +35,7 @@ import Navigation from '../components/navigation.astro'
 		font-family: system-ui, sans-serif;
 	}
 	.main-headline {
-		@apply text-6xl;
+		@apply text-6xl text-center md:text-left;
 		display: inline-block;
 		background: -webkit-linear-gradient(120deg, #5BCEFA 0%, #F5A9B8 100%);
 		-webkit-background-clip: text;
