@@ -17,6 +17,10 @@ import Navigation from '../components/navigation.astro'
 		<title>Trans Hilfe Elmshorn - {title}</title>
 	</head>
 	<body>
+	<div class="w-full">
+        <div class="w-full h-2 bg-blue-light"></div>
+        <div class="w-full h-2 bg-pink-light"></div>
+	</div>
 	<main class="max-w-screen-md mx-auto py-16 px-6">
 		<div class="flex justify-between items-center md:flex-row flex-col-reverse">
 			<a href="/" class="prose max-w-none py-16 flex items-center justify-between cursor-pointer">
@@ -27,6 +31,11 @@ import Navigation from '../components/navigation.astro'
 		<Navigation />
 		<slot />
 	</main>
+	<div class="w-full">
+	</div>
+	<footer class="relative w-full flex justify-center bg-white text-xs text-slate-500">
+        <span class="py-2">Made with 🏳️‍⚧️🤍 in Elmshorn · 2022</span>
+	</footer>
 	</body>
 </html>
 
