@@ -4,7 +4,11 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
 import Navigation from '../components/navigation.astro'
+
+const now = new Date();
+const currentYear = now.getFullYear();
 ---
 
 <!DOCTYPE html>
@@ -34,7 +38,7 @@ import Navigation from '../components/navigation.astro'
 	<div class="w-full">
 	</div>
 	<footer class="relative w-full flex justify-center bg-white text-xs text-slate-500">
-        <span class="py-2">Made with 🏳️‍⚧️🤍 in Elmshorn · 2022</span>
+        <span class="py-2">Made with 🏳️‍⚧️🤍 in Elmshorn · {currentYear}</span>
 	</footer>
 	</body>
 </html>
