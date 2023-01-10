@@ -10,9 +10,6 @@ const pathname = new URL(Astro.request.url).pathname;
 			<a class={pathname.startsWith('/trans-sein') ? 'squiggle active' : 'squiggle'}href="/trans-sein">Trans sein</a>
 		</li>
 		<li>
-			<a class={pathname.startsWith('/glossar') ? 'squiggle active' : 'squiggle'} href="/glossar">Glossar</a>
-		</li>
-		<li>
 			<a class={pathname.startsWith('/kontakt') ? 'squiggle active' : 'squiggle'}href="/kontakt">Kontakt</a>
 		</li>
 	</ul>
