@@ -1,6 +1,7 @@
 import {
   isSameDay,
   isAfter,
+  isToday,
   endOfMonth,
   startOfMonth,
   isTuesday,
@@ -34,7 +35,8 @@ const format = (date: Date) => {
     year: 'numeric'
   }).format(date)
   const rel = intlFormatDistance(date, new Date(), {
-      locale: 'de'
+      locale: 'de',
+      unit: 'day'
     })
 
   if (distance < 3) {
@@ -47,6 +49,6 @@ export const nextGroupDates = () => range(0, 100)
   .map(x => addMonths(new Date(), x))
   .map(thirdTuesdayOfMonth)
   .filter(isNotIgnoredDate)
-  .filter(d => !isAfter(new Date(), d!))
+  .filter(d => isToday(d) || !isAfter(new Date(), d!))
 
 export const nextGroupDate = () => format(nextGroupDates().at(0)!)
