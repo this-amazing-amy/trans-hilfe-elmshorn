@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
-import { nextGroupDate } from '../utils/date.ts'
 import Calendar from '../components/calendar.svelte'
+import NextDate from '../components/next-date.svelte'
 ---
 
 <Layout title="Die Gruppe">
@@ -50,7 +50,7 @@ dich auch unterstützen.
         <h2>Wann?</h2>
         <div class="grid gap-4 md:grid-cols-2 items-start">
             <Calendar client:load />
-            <p>Wir treffen uns jeden 3. Dienstag im Monat ab 18 Uhr. Wer möchte, kann auch später dazukommen. Das nächste Treffen ist <span class="squiggle active">{nextGroupDate()}</span>.</p>
+            <p>Wir treffen uns jeden 3. Dienstag im Monat ab 18 Uhr. Wer möchte, kann auch später dazukommen. Das nächste Treffen ist <span class="squiggle active"><NextDate client:load></span>.</p>
         </div>
 
         <h2>Wo?</h2>
