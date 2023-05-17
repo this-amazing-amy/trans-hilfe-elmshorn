@@ -17,54 +17,57 @@ import NextDate from '../components/next-date.svelte'
             zu allen Themen rund um die soziale, rechtliche und medizinische Transition,
             ganz egal ob weiblich, männlich oder nicht-binär. Natürlich sind auch Angehörige oder
             Begleitpersonen willkommen.
-            <br />
-            <br />
+            <br/>
+            <br/>
             Auch besteht die Möglichkeit deine Sorgen
             und Fragen in einem Einzelgespräch in einer
             neutralen Umgebung zu besprechen. Schreib
             uns dazu einfach eine <a href="/kontakt">Mail</a>.
         </p>
 
-<h2>Was machen wir?</h2>
-<p>
-Wir veranstalten einmal im Monat ein
-Gruppentreffen zum Austausch von
-Erfahrungen und Informationen.
-Wir nehmen uns umfassend Zeit, um
-mit euch über alles zu reden, was für
-euch gerade wichtig ist.
-<br />
-Hierbei ist es egal, ob du Hilfe bei der
-Selbstfindung brauchst oder ob du
-Unterstützung beim äußeren Coming
-Out bei der Familie, der Schule oder
-Arbeit benötigst.
-Auch bei allen Fragen rund um
-Hormone, Operationen und Therapie
-können wir dir zur Seite stehen.
-Beim Prozess der Vornamens- und
-Personenstandsänderung können wir
-dich auch unterstützen.
-</p>
+        <h2>Was machen wir?</h2>
+        <p>
+            Wir veranstalten einmal im Monat ein
+            Gruppentreffen zum Austausch von
+            Erfahrungen und Informationen.
+            Wir nehmen uns umfassend Zeit, um
+            mit euch über alles zu reden, was für
+            euch gerade wichtig ist.
+            <br/>
+            Hierbei ist es egal, ob du Hilfe bei der
+            Selbstfindung brauchst oder ob du
+            Unterstützung beim äußeren Coming
+            Out bei der Familie, der Schule oder
+            Arbeit benötigst.
+            Auch bei allen Fragen rund um
+            Hormone, Operationen und Therapie
+            können wir dir zur Seite stehen.
+            Beim Prozess der Vornamens- und
+            Personenstandsänderung können wir
+            dich auch unterstützen.
+        </p>
 
         <h2>Wann?</h2>
         <div class="grid gap-4 md:grid-cols-2 items-start">
-            <Calendar client:load />
-            <p>Wir treffen uns jeden 3. Dienstag im Monat. Ab 17 Uhr sammeln wir uns, und ab 18 Uhr starten wir. Wer möchte, kann auch später dazukommen. Das nächste Treffen ist <span class="squiggle active"><NextDate client:load></span>.</p>
+            <Calendar client:load/>
+            <p>Wir treffen uns jeden 3. Dienstag im Monat. Ab 17 Uhr sammeln wir uns, und ab 18 Uhr starten wir. Wer
+                möchte, kann auch später dazukommen. Das nächste Treffen ist <span class="squiggle active"><NextDate
+                        client:load></span>.
+            </p>
         </div>
 
         <h2>Wo?</h2>
         <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4">
-            <p class="m-0 mr-16">Hofcafé im Brückenhof<br />
-            Neue Straße 7<br />
-            25335 Elmshorn</p>
+            <p class="m-0 mr-16">Hofcafé im Brückenhof<br/>
+                Neue Straße 7<br/>
+                25335 Elmshorn</p>
             <iframe
-            class="border-0 w-full"
-            height="400"
-              loading="lazy"
-              allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDAp1PNsE65fIXYEedXDKEqIcScwbAm3Tw
+                    class="border-0 w-full"
+                    height="400"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDAp1PNsE65fIXYEedXDKEqIcScwbAm3Tw
                 &q=Neue+Straße+7+Elmshorn">
             </iframe>
         </div>
@@ -75,6 +78,7 @@ dich auch unterstützen.
     .calendar-view-item.selected {
         @apply bg-pink !important
     }
+
     .calendar-view-item.out-of-range {
         @apply text-gray-300 !important
     }
