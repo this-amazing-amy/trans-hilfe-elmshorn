@@ -49,6 +49,9 @@ import NextDate from '../components/next-date.svelte'
 
         <h2>Wann?</h2>
         <div class="grid gap-4 md:grid-cols-2 items-start">
+            <p class="p-4 col-span-2 border border-red-500 rounded bg-red-200">
+                Das Treffen heute am 17. September 2024 fällt leider aus. Wir sehen uns im Oktober wieder!
+            </p>
             <Calendar client:load/>
             <p>Wir treffen uns jeden 3. Dienstag im Monat. Ab 18 Uhr starten wir. Wer
                 möchte, kann auch später dazukommen. Das nächste Treffen ist <span class="squiggle active"><NextDate
